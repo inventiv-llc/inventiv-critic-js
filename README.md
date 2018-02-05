@@ -20,7 +20,7 @@ call. This token can be found by viewing your Product in the Critic web portal.
 0. Create a Report by adding the following to your web page:
 
 ```
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>    
     <script type="text/javascript" src="critic.js"></script>
     <script type="text/javascript">
         function createReport() {
