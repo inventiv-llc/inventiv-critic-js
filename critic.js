@@ -63,39 +63,3 @@ Critic.Report.create = function(product_access_token, description, metadata, att
 
     return this;
 };
-
-/**
- * Creates a Report in Critic using data from an HTML form. Field names must be named as follows:
- *     <ul>
- *         <li><b>report[product_access_token]</b> a Critic Product's access token.</li>
- *         <li><b>report[description]</b> a Critic Product's access token.</li>
- *         <li><b>report[metadata]</b> a Critic Product's access token.</li>
- *         <li><b>report[attachments][]</b> file attachments such as logs or screenshots.</li>
- *     </ul>
- * @param form_id the HTML form element's ID.
- */
-Critic.Report.createFromForm = function(form_id) {
-    this.formData = new FormData($('#' + form_id)[0]);
-    $.ajax({
-        contentType: false,
-        data: this.formData,
-        dataType: 'json',
-        processData: false,
-        type: 'POST',
-        url: Critic.host + '/api/v1/reports',
-        complete: function (xhr) {
-            if (xhr.readyState == 4) {
-                if (xhr.status == 201) {
-                    Critic.successFunc(xhr);
-                }
-                else {
-                    console.log("Something went wrong. Please check your responses and try again. Status code: " + xhr.status);
-                    Critic.failureFunc(xhr);
-                }
-            } else {
-                console.log("Something went wrong. Please check your responses and try again.");
-                Critic.failureFunc(xhr);
-            }
-        }
-    });
-};

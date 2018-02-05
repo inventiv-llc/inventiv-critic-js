@@ -24,7 +24,7 @@ Install using NPM:
 
 ## Usage
 
-Review `report.html` for a working example form that submits customer feedback reports to Critic.
+Review `example/report.html` for a working example form that submits customer feedback reports to Critic.
 
 0. Create an HTML form that includes the Report fields you care about.
 0. Include your Product's `product_access_token` as the first argument in your `Critic.Report.create()` function 
