@@ -30,7 +30,6 @@ Review `report.html` for a working example form that submits customer feedback r
 0. Include your Product's `product_access_token` as the first argument in your `Critic.Report.create()` function 
 call. This token can be found by viewing your Product's details in the Critic web portal.
 0. Create a Report by adding the following to your web page:
-
 ```
-    Critic.Report.create(product_access_token, description, metadata, attachments);
+Critic.Report.create(product_access_token, description, metadata, attachments);
 ```
