@@ -8,6 +8,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "jquery": "^1.7"
+    "jquery": "^3.3.1"
   }
 }
