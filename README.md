@@ -10,6 +10,18 @@ Use of this library requires jQuery to make calls to the Critic REST API.
 
 Copy `critic.js` into your project and reference it using a `<script>` tag.
 
+**OR**
+
+Install using Bower:
+    
+    bower install git+https://github.com/inventiv-llc/inventiv-critic-js.git
+
+**OR**
+
+Install using NPM:
+
+    npm install git+https://github.com/inventiv-llc/inventiv-critic-js.git
+
 ## Usage
 
 Review `report.html` for a working example form that submits customer feedback reports to Critic.
