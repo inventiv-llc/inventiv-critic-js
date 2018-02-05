@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Create Report - Inventiv Critic</title>
+    <link href="critic.css" media="all" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="formarea">
+      <h1 class="center">Critic Report Example</h1>
+      <div class="center">
+        Please tell us about your experience!
+      </div>
+      <hr/>
+      <form enctype="multipart/form-data" id="report_create" onsubmit="return createReport()">
+        <p>
+          <label for="report_description">Describe Your Experience</label>
+          <textarea id="report_description" name="report[description]"></textarea>
+        </p>
+        <p>
+          <label for="report_metadata">Rate Your Experience</label>
+          <input type="hidden" id="report_metadata" name="report[metadata]" value='{"star_rating": 3}' disabled />
+          <i id="star_rating_1" class="fas fa-star" onclick="setStarRating(1)"></i>
+          <i id="star_rating_2" class="fas fa-star" onclick="setStarRating(2)"></i>
+          <i id="star_rating_3" class="fas fa-star" onclick="setStarRating(3)"></i>
+          <i id="star_rating_4" class="far fa-star" onclick="setStarRating(4)"></i>
+          <i id="star_rating_5" class="far fa-star" onclick="setStarRating(5)"></i>
+        </p>
+        <p>
+          <label for="report_attachments">Screenshots (Optional)</label>
+          <input type="file" id="report_attachments" name="report[attachments][]" multiple />
+        </p>
+        <p class="center">
+          <button type="submit">Submit Report</button>
+        </p>
+      </form>
+    </div>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+    <script type="text/javascript" src="critic.js"></script>
+    <script type="text/javascript">
+      function createReport() {
+        product_access_token = "YOUR_PRODUCT_ACCESS_TOKEN";
+        description = $('#report_description').val();
+        metadata = $('#report_metadata').val();
+        attachments = document.getElementById('report_attachments').files;
+
+        Critic.Report.create(product_access_token, description, metadata, attachments);
+        return false;
+      }
+
+      function setStarRating(value) {
+        $('#report_metadata').val('{"star_rating": ' + value + '}');
+        for(var i=1; i<=5; i++) {
+          if(i<=value){
+            $('#star_rating_' + i).attr('class', 'fas fa-star');
+          }else{
+            $('#star_rating_' + i).attr('class', 'far fa-star');
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

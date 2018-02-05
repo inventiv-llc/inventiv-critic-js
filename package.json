@@ -1,0 +1,13 @@
+{
+  "name": "inventiv-critic",
+  "version": "1.0.1",
+  "main": "critic.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/inventiv-llc/inventiv-critic-js.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "jquery": "^1.7"
+  }
+}

@@ -1,0 +1,52 @@
+body {
+    background-color: whitesmoke;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+button {
+    display: inline-block;
+    color: #4d4353;
+    padding: 1em;
+}
+
+.center {
+    text-align: center;
+}
+
+.fa-star {
+    color: gold;
+}
+
+.formarea {
+    background-color: white;
+    border: 1px solid black;
+    min-width: 300px;
+    width: 400px;
+    max-width: 900px;
+    margin: auto;
+    padding: 1em;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+hr {
+    margin: 2em 0;
+}
+
+input, textarea {
+    padding: 1em;
+    width: 100%;
+}
+
+input[type=file] {
+    border: 1px dashed lightgrey;
+    padding: 1em;
+    width: 100%;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
