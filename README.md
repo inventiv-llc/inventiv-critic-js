@@ -1,6 +1,6 @@
 # Inventiv Critic JavaScript Library
 
-Use this library to build web-based integrations with [Inventiv Critic](https://inventiv.io/critic/) .
+Use this library to build web-based integrations with [Inventiv Critic](https://inventiv.io/critic/).
 
 ## Requirements
 
